@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviePickerManager" customModule="MovieDemo" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MoviePicker" customModule="MovieDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Zn-8I-egR">
+                    <rect key="frame" x="0.0" y="40" width="375" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="9gj-c5-nRl"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="3a1-Qr-72o"/>
+                        <outlet property="delegate" destination="-1" id="rKq-ht-vtO"/>
+                    </connections>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJw-pq-UJ4">
+                    <rect key="frame" x="325" y="0.0" width="50" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="10B-tV-GbO"/>
+                        <constraint firstAttribute="width" constant="50" id="n0n-Os-e0F"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="OK">
+                        <color key="titleColor" red="0.45882352939999999" green="0.50980392159999999" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="okBtnHandle:" destination="-1" eventType="touchUpInside" id="ike-4Q-ldo"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9b-ib-2Z8">
+                    <rect key="frame" x="167.5" y="10" width="39.5" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.45882352941176469" green="0.50980392156862742" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4Zn-8I-egR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0IV-wl-FWr"/>
+                <constraint firstAttribute="trailing" secondItem="4Zn-8I-egR" secondAttribute="trailing" id="Jqj-zm-2CT"/>
+                <constraint firstItem="U9b-ib-2Z8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Jx3-1D-ogz"/>
+                <constraint firstItem="U9b-ib-2Z8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ny7-Sx-DZ1"/>
+                <constraint firstItem="sJw-pq-UJ4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="P7X-au-gTV"/>
+                <constraint firstAttribute="trailing" secondItem="sJw-pq-UJ4" secondAttribute="trailing" id="bOv-cr-o5u"/>
+                <constraint firstAttribute="bottom" secondItem="4Zn-8I-egR" secondAttribute="bottom" id="oJX-gb-Fz3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="U9b-ib-2Z8" id="7hR-Io-078"/>
+            </connections>
+            <point key="canvasLocation" x="24" y="-64"/>
+        </view>
+    </objects>
+</document>
